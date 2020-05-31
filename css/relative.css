@@ -1,0 +1,49 @@
+/* aside */
+aside {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 2rem;
+}
+
+aside > .container > h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+aside > .container > ul {
+    padding: 3rem 0;
+}
+
+aside > .container > ul > li {
+    background-color: white;
+    padding: .75rem;
+    margin: .15rem;
+    overflow: hidden;
+}
+
+aside > .container > ul > li > a:first-of-type {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: var(--font-color);
+    text-decoration: none;
+    margin-bottom: .5rem;
+}
+
+aside > .container > ul > li ul {
+    display: flex;
+}
+
+aside > .container > ul > li ul a {
+    color: var(--green);
+    text-decoration: underline;
+}
+aside > .container > ul > li ul svg {
+    position: relative;
+    top: 2px;
+}
+
