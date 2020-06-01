@@ -1,50 +1,47 @@
-article {
-    padding-top: 2em;
+#summary article {
+    padding-top: 2.5em;
 }
 
-article > header > h1 {
+#summary article > header > h1 {
     line-height: 40px;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-article > ul {
+#summary article > ul {
     display: flex;
     margin-bottom: .5rem;
 }
 
-article > ul > li:first-of-type {
+#summary article > ul > li:first-of-type {
     margin-right: 10px;
 }
 
-article > ul > li svg {
+#summary article > ul > li svg {
     position: relative;
     top: 1px;
 }
 
-article > ul > li span:last-of-type {
+#summary article > ul > li span {
     font-size: 1rem;
 }
 
-article > ul > li span:last-of-type a {
+#summary article > ul > li span a {
     color: var(--green);
     text-decoration: underline;
 }
 
-article > ul > li.share .icon {
+#summary article > ul > li.share .icon {
     font-size: 1.3rem;
 }
 
-article > .content {
+#summary article > .content {
     margin: 2rem 0;
-}
-
-article > .content p {
     font-size: 1.4rem;
 }
 
-article > .content hr {
+#summary article > .content hr {
     font-size: 1.5rem;
     margin: 2rem 0 4.5rem;
     border: 0;
@@ -53,33 +50,33 @@ article > .content hr {
     text-align: center;
 }
 
-article > .content hr::after {
+#summary article > .content hr::after {
     content: "...";
     letter-spacing: .6em;
 }
 
-article > .content a {
+#summary article > .content a {
     color: var(--green);
     text-decoration: underline;
 }
 
-article > .content > code {
+#summary article > .content > code {
     color: var(--red);
 }
 
-article > .content pre {
+#summary article > .content pre {
     background: rgba(0, 0, 0, .05);
     font-size: 1rem;
 }
 
-article > .content h2 {
+#summary article > .content h2 {
     font-size: 2.1rem;
 }
 
-article > .content h3 {
+#summary article > .content h3 {
     font-size: 1.7rem;
 }
 
-article > .content ul li {
+#summary article > .content ul li {
     font-size: 1.4rem;
 }

@@ -22,5 +22,8 @@
     border: 1px solid #f0f0f0;
     padding: 5px 10px;
     margin: 0 5px 5px 0;
+}
+
+#category ul.related > li > a {
     color: var(--green);
 }

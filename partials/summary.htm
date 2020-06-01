@@ -1,0 +1,23 @@
+<main id="summary" class="columns">
+    <article class="column is-half is-offset-one-quarter">
+        <header>
+            <h1>{{ post.title }}</h1>
+        </header>
+        <ul>
+            <li>
+                <span class="icon"><i class="far fa-calendar-alt"></i></span>
+                <span>{{ post.published_at|date('M d, Y') }}</span>
+            </li>
+            <li>
+                <span class="icon"><i class="fas fa-hashtag"></i></span>
+                {% for category in post.categories %}
+                    <span><a href="{{ category.url }}">{{ category.name }}</a></span>
+                    <span>{% if not loop.last %}, {% endif %}</span>
+                {% endfor %}
+            </li>
+        </ul>
+        <div class="content">
+            {{ post.summary|raw }}
+        </div>
+    </article>
+</main>

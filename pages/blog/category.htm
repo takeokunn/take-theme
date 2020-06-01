@@ -22,119 +22,23 @@ categoryPage = "blog/category"
 <main id="category" class="columns">
     <div class="column is-three-fifths is-offset-one-fifth">
         <p class="subtitle">Category</p>
-        <h2 class="title">Emacs</h2>
+        <h2 class="title">{{ category.name }}</h2>
         <hr>
         <div class="columns">
             <div class="column is-one-quarter">
                 <p class="subtitle">Related Category</p>
                 <ul class="related">
-                    <li>CircleCI</li>
-                    <li>Ruby</li>
-                    <li>JavaScript</li>
-                    <li>CTF</li>
-                    <li>Poem</li>
-                    <li>MySQL</li>
+                    {% for category in categories %}
+                        <li>
+                            <a href="{{ category.url }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
             <ul id="blog" class="column">
-                <li>
-                    <h2>2020年5月の個人的SPA CircleCI設定のベストプラクティス</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>CircleCI</a></span>
-                        </li>
-                    </ul>
-                    <p>割とテンプレ化されてきたのでそろそろまとめておく。</p>
-                </li>
-                <li>
-                    <h2>RedashのQuery一覧を保存する方法</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>Redash</a></span>
-                        </li>
-                    </ul>
-                    <p>副業でRedashの情報を保存したいという要望があった。 AMIをとるのは大げさだよなぁと思ったのでqueryの一覧を取得する方法について調べてみた。</p>
-                </li>
-                <li>
-                    <h2>ielmのhistoryをcounselで検索できるようにする</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>Emacs</a></span>
-                        </li>
-                    </ul>
-                    <p>incremental searchは絶対的に正義だ。これは揺るがない。 elispを最近結構書いているのでielmの使い勝手がslime/sbcl並に良くなってほしいが如何せん使ってる人が少ないのか全然hack記事がないので折角なので調べてみた。</p>
-                </li>
-                <li>
-                    <h2>2020年5月の個人的SPA CircleCI設定のベストプラクティス</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>Emacs</a></span>
-                        </li>
-                    </ul>
-                    <p>割とテンプレ化されてきたのでそろそろまとめておく。</p>
-                </li>
-                <li>
-                    <h2>2020年5月の個人的SPA CircleCI設定のベストプラクティス</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>Emacs</a></span>
-                        </li>
-                    </ul>
-                    <p>割とテンプレ化されてきたのでそろそろまとめておく。</p>
-                </li>
-                <li>
-                    <h2>2020年5月の個人的SPA CircleCI設定のベストプラクティス</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>Emacs</a></span>
-                        </li>
-                    </ul>
-                    <p>割とテンプレ化されてきたのでそろそろまとめておく。</p>
-                </li>
-                <li>
-                    <h2>2020年5月の個人的SPA CircleCI設定のベストプラクティス</h2>
-                    <ul>
-                        <li>
-                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                            <span>May 14, 2020</span>
-                        </li>
-                        <li>
-                            <span class="icon"><i class="fas fa-hashtag"></i></span>
-                            <span><a>Emacs</a></span>
-                        </li>
-                    </ul>
-                    <p>割とテンプレ化されてきたのでそろそろまとめておく。</p>
-                </li>
+                {% for post in posts %}
+                    <li>{% partial 'post' post=post %}</li>
+                {% endfor %}
             </ul>
         </div>
     </div>
