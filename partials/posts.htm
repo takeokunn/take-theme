@@ -1,0 +1,7 @@
+<main class="columns">
+    <ul id="blog" class="column is-half is-offset-one-quarter">
+        {% for post in posts %}
+            <li>{% partial 'post' post=post %}</li>
+        {% endfor %}
+    </ul>
+</main>

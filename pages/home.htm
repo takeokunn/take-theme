@@ -1,7 +1,17 @@
 title = "Welcome"
 url = "/"
 layout = "default"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "20"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
 ==
 
+{% set posts = blogPosts.posts %}
+
 {% partial 'hero' %}
-{% partial 'blogs' %}
+{% partial 'posts' posts=posts %}
+{% partial 'pagination' posts=posts %}
