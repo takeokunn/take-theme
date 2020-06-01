@@ -1,0 +1,10 @@
+ul#blog > li {
+    border-radius: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+}
+
+ul#blog > li:first-of-type {
+    border: 0;
+    padding-top: 0;
+}

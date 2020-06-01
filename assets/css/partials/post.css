@@ -1,0 +1,36 @@
+article#post > a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+article#post > ul {
+    display: flex;
+    margin-bottom: .5rem;
+}
+
+article#post > ul > li:first-of-type {
+    margin-right: 10px;
+}
+
+article#post > ul > li svg {
+    position: relative;
+    top: 1px;
+}
+
+article#post > ul > li span {
+    font-size: 1rem;
+}
+
+article#post > ul > li span a {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+article#post > ul > li.share .icon {
+    font-size: 1.3rem;
+}
+
+article#post > p {
+    font-size: 1.4rem;
+}
