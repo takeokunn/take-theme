@@ -1,29 +1,27 @@
 /* aside */
 aside {
-    background-color: rgba(0, 0, 0, .1);
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, .01);
 }
 
-aside > .container > h2 {
-    font-size: 1.7rem;
+aside > .column > h2 {
+    font-size: 2.1rem;
     font-weight: bold;
     line-height: 4rem;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
-aside > .container > ul {
-    padding: 3rem 0;
+aside > .column > ul {
+    padding: 1rem 0;
 }
 
-aside > .container > ul > li {
+aside > .column > ul > li {
     background-color: white;
-    padding: .75rem;
-    margin: .15rem;
+    padding: .75rem 0;
     overflow: hidden;
 }
 
-aside > .container > ul > li > a:first-of-type {
-    font-size: 1.2rem;
+aside > .column > ul > li > a:first-of-type {
+    font-size: 1.4rem;
     font-weight: bold;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -34,15 +32,15 @@ aside > .container > ul > li > a:first-of-type {
     margin-bottom: .5rem;
 }
 
-aside > .container > ul > li ul {
+aside > .column > ul > li ul {
     display: flex;
 }
 
-aside > .container > ul > li ul a {
+aside > .column > ul > li ul a {
     color: var(--green);
     text-decoration: underline;
 }
-aside > .container > ul > li ul svg {
+aside > .column > ul > li ul svg {
     position: relative;
     top: 2px;
 }

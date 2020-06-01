@@ -1,0 +1,8 @@
+name: take-theme
+description: Take theme.
+author: takeokunn
+homepage: https://github.com/takeokunn/take-theme/
+code: Take
+form: theme_fields.yaml
+require:
+  - RainLab.Blog

@@ -1,0 +1,58 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ this.page.title }} - {{ this.theme.site_name }}</title>
+
+    {% if this.page.description %}
+    <meta name="description" content="{{ this.page.meta_description }}">
+    {% else %}
+    <meta name="description" content="poem driven development">
+    {% endif %}
+
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="takeokunn">
+    <meta name="generator" content="OctoberCMS">
+
+    <meta property="og:title" content="{{ this.page.title }} - {{ this.theme.site_name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ this.page.url }}">
+    <meta property="og:image" content="https://takeokunn.xyz/storage/app/media/icon.png">
+    <meta property="og:site_name" content="takeokunn's blog">
+    <meta property="og:description" content="poem driven development">
+    <meta property="fb:admins" content="100010281068944">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="takeokunn's blog">
+    <meta name="twitter:image" content="https://takeokunn.xyz/storage/app/media/icon.png">
+    <meta name="twitter:title" content="{{ this.page.title }} - {{ this.theme.site_name }}">
+    <meta name="twitter:description" content="poem driven development">
+
+    <link rel="icon" type="image/png" href="{{ 'assets/images/favicon.ico'|theme }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+    <link href="{{ [
+        'assets/css/common.css',
+        'assets/css/navbar.css',
+        'assets/css/article.css',
+        'assets/css/blogs.css',
+        'assets/css/category.css',
+        'assets/css/hero.css',
+        'assets/css/relative.css',
+        'assets/css/footer.css',
+    ]|theme }}" rel="stylesheet">
+</head>
+<body>
+    {% partial 'navbar' %}
+    {% page %}
+    {% partial 'footer' %}
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-135483596-1');
+    </script>
+</body>
+</html>

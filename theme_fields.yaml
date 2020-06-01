@@ -1,0 +1,18 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  site_name:
+    label: Site name
+    comment: The website name as it should appear on the front-end
+    default: takeokunn's blog
+    span: auto
+  twitter_url:
+    label: Twitter URL
+    span: auto
+    default: https://twitter.com/takeokunn
+  github_url:
+    label: GitHub URL
+    span: auto
+    default: https://github.com/takeokunn
