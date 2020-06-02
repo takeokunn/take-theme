@@ -61,6 +61,10 @@
     letter-spacing: .6em;
 }
 
+#summary article > .content p {
+    word-break: break-word;
+}
+
 #summary article > .content a {
     color: var(--green);
     text-decoration: underline;
