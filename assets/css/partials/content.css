@@ -1,53 +1,53 @@
-#summary {
+#content {
     padding-top: 2.5em;
 }
 
 @media screen and (max-width: 1023px) {
-    #summary {
+    #content {
         padding: 2.5rem 1.5rem;
     }
 }
 
-#summary article > header > h1 {
+#content article > header > h1 {
     line-height: 40px;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-#summary article > ul {
+#content article > ul {
     display: flex;
     margin-bottom: .5rem;
 }
 
-#summary article > ul > li:first-of-type {
+#content article > ul > li:first-of-type {
     margin-right: 10px;
 }
 
-#summary article > ul > li svg {
+#content article > ul > li svg {
     position: relative;
     top: 1px;
 }
 
-#summary article > ul > li span {
+#content article > ul > li span {
     font-size: 1rem;
 }
 
-#summary article > ul > li span a {
+#content article > ul > li span a {
     color: var(--green);
     text-decoration: underline;
 }
 
-#summary article > ul > li.share .icon {
+#content article > ul > li.share .icon {
     font-size: 1.3rem;
 }
 
-#summary article > .content {
+#content article > .content {
     margin: 2rem 0;
     font-size: 1.4rem;
 }
 
-#summary article > .content hr {
+#content article > .content hr {
     font-size: 1.5rem;
     margin: 2rem 0 4.5rem;
     border: 0;
@@ -56,37 +56,37 @@
     text-align: center;
 }
 
-#summary article > .content hr::after {
+#content article > .content hr::after {
     content: "...";
     letter-spacing: .6em;
 }
 
-#summary article > .content p {
+#content article > .content p {
     word-break: break-word;
 }
 
-#summary article > .content a {
+#content article > .content a {
     color: var(--green);
     text-decoration: underline;
 }
 
-#summary article > .content > code {
+#content article > .content > code {
     color: var(--red);
 }
 
-#summary article > .content pre {
+#content article > .content pre {
     background: rgba(0, 0, 0, .05);
     font-size: 1rem;
 }
 
-#summary article > .content h2 {
+#content article > .content h2 {
     font-size: 2.1rem;
 }
 
-#summary article > .content h3 {
+#content article > .content h3 {
     font-size: 1.7rem;
 }
 
-#summary article > .content ul li {
+#content article > .content ul li {
     font-size: 1.4rem;
 }
