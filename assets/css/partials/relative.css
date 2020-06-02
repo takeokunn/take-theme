@@ -2,20 +2,34 @@ aside#relative {
     background-color: rgba(0, 0, 0, .01);
 }
 
-aside#relative > .column > h2 {
+aside#relative {
+    padding: 1.5rem 0;
+}
+
+@media screen and (max-width: 1023px) {
+    aside#relative {
+        padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    }
+
+    aside#relative .column {
+        padding: 0;
+    }
+}
+
+aside#relative .column > h2 {
     font-size: 2.1rem;
     font-weight: bold;
     line-height: 4rem;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
-aside#relative > .column > ul > li {
+aside#relative .column > ul > li {
     background-color: white;
     padding: .75rem 0;
     overflow: hidden;
 }
 
-aside#relative > .column > ul > li > a:first-of-type {
+aside#relative .column > ul > li > a:first-of-type {
     font-size: 1.4rem;
     font-weight: bold;
     display: -webkit-box;
@@ -27,15 +41,15 @@ aside#relative > .column > ul > li > a:first-of-type {
     margin-bottom: .5rem;
 }
 
-aside#relative > .column > ul > li ul {
+aside#relative .column > ul > li ul {
     display: flex;
 }
 
-aside#relative > .column > ul > li ul a {
+aside#relative .column > ul > li ul a {
     color: var(--green);
     text-decoration: underline;
 }
-aside#relative > .column > ul > li ul svg {
+aside#relative .column > ul > li ul svg {
     position: relative;
     top: 2px;
 }

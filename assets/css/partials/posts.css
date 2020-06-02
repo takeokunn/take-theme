@@ -1,10 +1,28 @@
-ul#blog > li {
+main#posts {
+    padding-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1023px) {
+    main#posts {
+        padding: 1.5rem;
+    }
+}
+
+main#posts ul.posts > li {
     border-radius: 5px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 40px 0;
 }
 
-ul#blog > li:first-of-type {
+main#posts ul.posts > li:first-of-type {
     border: 0;
     padding-top: 0;
+}
+
+main#posts nav.pagination .is-current {
+    background-color: var(--green) !important;
+}
+
+main#posts nav.pagination .is-current > a {
+    color: white !important;
 }

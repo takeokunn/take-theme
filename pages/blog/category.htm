@@ -19,27 +19,29 @@ displayEmpty = "0"
 categoryPage = "blog/category"
 ==
 
-<main id="category" class="columns">
-    <div class="column is-three-fifths is-offset-one-fifth">
-        <p class="subtitle">Category</p>
-        <h2 class="title">{{ category.name }}</h2>
-        <hr>
-        <div class="columns">
-            <div class="column is-one-quarter">
-                <p class="subtitle">All Categories</p>
-                <ul class="related">
-                    {% for category in categories %}
-                        <li>
-                            <a href="{{ category.url }}">{{ category.name }}</a>
-                        </li>
+<main id="category">
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth">
+            <p class="subtitle">Category</p>
+            <h2 class="title">{{ category.name }}</h2>
+            <hr>
+            <div class="columns">
+                <div class="column is-one-quarter">
+                    <p class="subtitle">All Categories</p>
+                    <ul class="related">
+                        {% for category in categories %}
+                            <li>
+                                <a href="{{ category.url }}">{{ category.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <ul id="blog" class="column">
+                    {% for post in posts %}
+                        <li>{% partial 'post' post=post %}</li>
                     {% endfor %}
                 </ul>
             </div>
-            <ul id="blog" class="column">
-                {% for post in posts %}
-                    <li>{% partial 'post' post=post %}</li>
-                {% endfor %}
-            </ul>
         </div>
     </div>
 </main>

@@ -1,5 +1,11 @@
 #category {
-    padding: 50px 0;
+    padding: 2.5rem 0;
+}
+
+@media screen and (max-width: 1023px) {
+    #category {
+        padding: 1.5rem;
+    }
 }
 
 #category .title {

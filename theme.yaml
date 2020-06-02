@@ -6,3 +6,4 @@ code: Take
 form: theme_fields.yaml
 require:
   - RainLab.Blog
+  - SoBoRed.Rss

@@ -1,7 +1,22 @@
-<main class="columns">
-    <ul id="blog" class="column is-half is-offset-one-quarter">
-        {% for post in posts %}
-            <li>{% partial 'post' post=post %}</li>
-        {% endfor %}
-    </ul>
+<main id="posts">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <ul class="posts">
+                {% for post in posts %}
+                    <li>{% partial 'post' post=post %}</li>
+                {% endfor %}
+            </ul>
+            <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+                <ul class="pagination-list">
+                    {% for page in 1..posts.lastPage %}
+                    <li class="pagination-link {{ posts.currentPage == page ? 'is-current' : null }}">
+                        <a href="{{ this.page.baseFileName|page() }}?page={{ page }}" aria-label="Goto page {{ page }}">
+                            {{ page }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
 </main>

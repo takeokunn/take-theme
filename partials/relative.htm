@@ -5,28 +5,30 @@ postPage = "blog/post"
 sortOrder = "published_at desc"
 ==
 
-<aside id="relative" class="columns">
-    <div class="column is-half is-offset-one-quarter">
-        <h2>Recent</h2>
-        <ul>
-            {% for post in posts %}
-            <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <ul>
-                    <li>
-                        <span class="icon"><i class="far fa-calendar-alt"></i></span>
-                        <span>{{ post.published_at|date('M d, Y') }}</span>
-                    </li>
-                    <li>
-                        <span class="icon"><i class="fas fa-hashtag"></i></span>
-                        {% for category in post.categories %}
-                            <span><a href="{{ category.url }}">{{ category.name }}</a></span>
-                            <span>{% if not loop.last %}, {% endif %}</span>
-                        {% endfor %}
-                    </li>
-                </ul>
-            </li>
-            {% endfor %}
-        </ul>
+<aside id="relative">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <h2>Recent</h2>
+            <ul>
+                {% for post in posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="far fa-calendar-alt"></i></span>
+                            <span>{{ post.published_at|date('M d, Y') }}</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-hashtag"></i></span>
+                            {% for category in post.categories %}
+                                <span><a href="{{ category.url }}">{{ category.name }}</a></span>
+                                <span>{% if not loop.last %}, {% endif %}</span>
+                            {% endfor %}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </aside>
