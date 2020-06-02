@@ -8,3 +8,12 @@ footer p {
     text-align: center;
     color: white;
 }
+
+footer p a {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+footer p a:hover {
+    color: inherit;
+}
