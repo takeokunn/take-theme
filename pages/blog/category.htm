@@ -36,11 +36,13 @@ categoryPage = "blog/category"
                         {% endfor %}
                     </ul>
                 </div>
-                <ul id="blog" class="column">
-                    {% for post in posts %}
-                        <li>{% partial 'post' post=post %}</li>
-                    {% endfor %}
-                </ul>
+                <div id="posts" class="column">
+                    <ul class="posts">
+                        {% for post in posts %}
+                            <li>{% partial 'post' post=post %}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
