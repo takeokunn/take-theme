@@ -28,22 +28,6 @@ sortOrder = "published_at desc"
                     </ul>
                 </li>
                 {% endfor %}
-                {% if post.lastPost %}
-                <li>
-                    <a href="{{ post.lastPost.url }}" class="link-previous">
-                        <p>Previous</p>
-                        <span>{{ post.lastPost.title }}</span>
-                    </a>
-                </li>
-                {% endif %}
-                {% if post.nextPost %}
-                <li>
-                    <a href="{{ post.nextPost.url }}" class="link-next">
-                        <p>Next</p>
-                        <span>{{ post.nextPost.title }}</span>
-                    </a>
-                </li>
-                {% endif %}
             </ul>
         </div>
     </div>
