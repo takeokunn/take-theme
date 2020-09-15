@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ this.page.title }} - {{ this.theme.site_name }}</title>
 
-    {% if this.page.description %}
-    <meta name="description" content="{{ this.page.description }}">
+    {% if this.page.meta_description %}
+    <meta name="description" content="{{ this.page.meta_description }}">
     {% else %}
     <meta name="description" content="poem driven development">
     {% endif %}
