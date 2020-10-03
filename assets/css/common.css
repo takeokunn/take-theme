@@ -31,3 +31,19 @@ body {
 .fa-rss {
     color: var(--rss-color);
 }
+
+h2:before {
+    content: "## ";
+}
+
+h3:before {
+    content: "### ";
+}
+
+h4:before {
+    content: "#### ";
+}
+
+h5:before {
+    content: "##### ";
+}
